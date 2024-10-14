@@ -14,7 +14,7 @@ public final class Functions {
 
     public static String trimLine(String str) {
         if(str.length() > 42) {
-            return str.substring(0, 40) + "...\""; 
+            return str.substring(0, 41) + "...\""; 
         }
         return str;
     }
