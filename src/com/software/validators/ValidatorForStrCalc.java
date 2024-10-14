@@ -1,6 +1,6 @@
 package com.software.validators;
 
-public class ValidatorForStrСalc {
+public class ValidatorForStrCalc {
     public static boolean checkNumRange(int num) {
         try {
             if(num > 10 || num < 1)

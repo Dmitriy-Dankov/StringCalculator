@@ -6,7 +6,7 @@ import com.software.calculators.StringCalculator;
 import com.software.console.Reader;
 import com.software.functions.Functions;
 import com.software.validators.ValidExForCalc;
-import com.software.validators.ValidatorForStrСalc;
+import com.software.validators.ValidatorForStrCalc;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,9 +17,9 @@ public class Main {
             System.out.println("Enter expression: ");
 
             String word1 = reader.readWord();
-            ValidatorForStrСalc.isString(word1); // проверить, что это строка
-            ValidatorForStrСalc.isQuotes(word1); // проверить на содержание кавычек
-            ValidatorForStrСalc.checkStrLength(word1); // проверить длину строки
+            ValidatorForStrCalc.isString(word1); // проверить, что это строка
+            ValidatorForStrCalc.isQuotes(word1); // проверить на содержание кавычек
+            ValidatorForStrCalc.checkStrLength(word1); // проверить длину строки
             word1 = Functions.cutOffQuotes(word1); // убрать кавычки
 
             char ch = reader.readChar();
@@ -27,33 +27,33 @@ public class Main {
             switch (ch) {
                 case '+': {
                     String word2 = reader.readWord();
-                    ValidatorForStrСalc.isString(word2); // проверить, что это строка
-                    ValidatorForStrСalc.isQuotes(word2); // проверить на содержание кавычек
-                    ValidatorForStrСalc.checkStrLength(word2); // проверить длину строки
+                    ValidatorForStrCalc.isString(word2); // проверить, что это строка
+                    ValidatorForStrCalc.isQuotes(word2); // проверить на содержание кавычек
+                    ValidatorForStrCalc.checkStrLength(word2); // проверить длину строки
                     word2 = Functions.cutOffQuotes(word2); // убрать кавычки
                     System.out.println(StringCalculator.sum(word1, word2)); // сложить и вывести результат
                 }
                     break;
                 case '-': {
                     String word2 = reader.readWord();
-                    ValidatorForStrСalc.isString(word2); // проверить, что это строка
-                    ValidatorForStrСalc.isQuotes(word2); // проверить на содержание кавычек
-                    ValidatorForStrСalc.checkStrLength(word2);  // проверить длину строки
+                    ValidatorForStrCalc.isString(word2); // проверить, что это строка
+                    ValidatorForStrCalc.isQuotes(word2); // проверить на содержание кавычек
+                    ValidatorForStrCalc.checkStrLength(word2);  // проверить длину строки
                     word2 = Functions.cutOffQuotes(word2); // убрать кавычки
                     System.out.println(StringCalculator.diff(word1, word2)); // вычесть и вывести результат
                 }
                     break;
                 case '/': {
                     int num = reader.readInteger();
-                    ValidatorForStrСalc.isInteger(num); // проверить что это число
-                    ValidatorForStrСalc.checkNumRange(num); // проверить диапазон
+                    ValidatorForStrCalc.isInteger(num); // проверить что это число
+                    ValidatorForStrCalc.checkNumRange(num); // проверить диапазон
                     System.out.println(StringCalculator.div(word1, num)); // вывести результат
                 }
                     break;
                 case '*': {
                     int num = reader.readInteger();
-                    ValidatorForStrСalc.isInteger(num); // проверить что это число
-                    ValidatorForStrСalc.checkNumRange(num); // проверить диапазон
+                    ValidatorForStrCalc.isInteger(num); // проверить что это число
+                    ValidatorForStrCalc.checkNumRange(num); // проверить диапазон
                     String result = StringCalculator.multi(word1, num); // умножить
                     System.out.println(Functions.trimLine(result)); // вывести результат
                 }
