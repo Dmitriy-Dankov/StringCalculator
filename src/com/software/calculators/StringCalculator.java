@@ -10,12 +10,12 @@ public class StringCalculator {
         
         if(str1.equals(str2)) return "";
         
-        int index = str1.indexOf(str2) - 1;
+        int index = str1.indexOf(str2);
         
         if(index < 0) return '"' + str1 + '"';
 
         for (int i = 0; i < str1.length(); ++i) {
-            if (i <= index || i >= (index + str2.length()+1))
+            if (i <= index-1 || i >= (index + str2.length()))
                 temp.append(str1.charAt(i));
         }
 
